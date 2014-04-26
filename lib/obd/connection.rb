@@ -8,7 +8,11 @@ module OBD
     end
     
     def voltage
-      send("AT RV")
+      OBD::Result.new(
+        'Voltage',
+        send("AT RV").to_f,
+        units: 'V'
+      )
     end
     
     def connect
@@ -24,7 +28,7 @@ module OBD
 
     def [] command
       OBD::Command.format_result(command, send(OBD::Command.to_hex(command)))
-      com = OBD::Command.new command
+      #com = OBD::Command.new command
     end
     
     def send data
