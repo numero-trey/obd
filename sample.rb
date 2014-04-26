@@ -8,7 +8,7 @@ obd = OBD.connect OBD_DEVICE, OBD_BAUD
 puts 'OK'
 
 # OBD::Command.add_pid :oil_pressure, {
-#   pid: 'F043',
+#   pid: 'ABCD',
 #   fmt: lambda {|x,d| (d.to_f * 3.2) - 1.6 },
 #   unit: 'psi'
 # }
