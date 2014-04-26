@@ -1,6 +1,6 @@
-require './lib/obd'
+require 'obd'
 
-OBD_DEVICE = '/dev/tty.SLAB_USBtoUART'  #'/dev/tty.obd'
+OBD_DEVICE = '/dev/tty.obd'
 OBD_BAUD = 38400
 
 print "Opening OBDII connection..."
